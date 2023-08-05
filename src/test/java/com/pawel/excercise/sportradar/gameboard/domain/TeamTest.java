@@ -22,4 +22,9 @@ public class TeamTest {
 
         assertEquals(10, team.getScore());
     }
+
+    @Test
+    void shouldBeAbleToCreateNewTeamWithNameAndScore() {
+        Team team = new Team("Poland", 0);
+    }
 }
