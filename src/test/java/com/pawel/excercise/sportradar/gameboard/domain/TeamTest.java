@@ -13,4 +13,13 @@ public class TeamTest {
 
         assertEquals("Poland", team.getName());
     }
+
+    @Test
+    void shouldBeAbleToSetScoreToTeam() {
+        Team team = new Team();
+
+        team.setScore(10);
+
+        assertEquals(10, team.getScore());
+    }
 }
