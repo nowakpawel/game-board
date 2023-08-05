@@ -4,6 +4,14 @@ public class Team {
     private String name;
     private Integer score;
 
+    public Team() {
+    }
+
+    public Team(String name, Integer score) {
+        this.name = name;
+        this.score = score;
+    }
+
     public String getName() {
         return name;
     }
