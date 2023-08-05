@@ -26,5 +26,8 @@ public class TeamTest {
     @Test
     void shouldBeAbleToCreateNewTeamWithNameAndScore() {
         Team team = new Team("Poland", 0);
+
+        assertEquals("Poland", team.getName());
+        assertEquals(0, team.getScore());
     }
 }
