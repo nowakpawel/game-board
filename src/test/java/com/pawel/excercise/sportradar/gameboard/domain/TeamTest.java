@@ -7,5 +7,8 @@ public class TeamTest {
     @Test
     void shouldSetTeamName() {
         Team team = new Team();
+
+        team.setName("poland");
+        
     }
 }
