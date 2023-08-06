@@ -8,6 +8,8 @@ import org.springframework.data.util.Pair;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 
 public class GameServiceTest {
     private GameService underTest = null;
@@ -56,9 +58,6 @@ public class GameServiceTest {
         assertEquals(underTest.getGame().getFirst().getScore(), 4);
         assertEquals(underTest.getGame().getSecond().getScore(), 1);
 
-
-
-
-
+        verify(underTest, times(1)).notifyObserver();
     }
 }
