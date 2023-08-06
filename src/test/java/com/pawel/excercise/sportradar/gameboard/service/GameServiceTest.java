@@ -66,10 +66,11 @@ public class GameServiceTest {
     }
 
     @Test
-    void shouldBeAbleToAddNewObserver(GameObserver newObserver) {
+    void shouldBeAbleToAddNewObserver() {
+        GameObserver newObserver = new GameBoard();
         underTest.addNewGameObserver(newObserver);
 
-        assertEquals(underTest.getGameObservers(), 2);
+        assertEquals(underTest.getGameObservers().size(), 2);
 
     }
 }
