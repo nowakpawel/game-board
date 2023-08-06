@@ -4,7 +4,10 @@ import com.pawel.excercise.sportradar.gameboard.domain.GameBoard;
 import com.pawel.excercise.sportradar.gameboard.domain.Team;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestTemplate;
 import org.springframework.data.util.Pair;
+
+import java.util.Observer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -58,5 +61,13 @@ public class GameServiceTest {
         assertEquals(underTest.getGame().getSecond().getScore(), 1);
 
         verify(gameBoard, times(1)).update();
+    }
+
+    @Test
+    void shouldBeAbleToAddNewObserver(GameObserver newObserver) {
+        underTest.addNewGameObserver(newObserver);
+
+        assertEquals(underTest.getGameObservers(), 2);
+
     }
 }
