@@ -8,6 +8,7 @@ public class GameService {
     private final Pair<Team, Team> game;
     private final GameBoard gameBoard;
 
+
     public GameService(final Pair<Team, Team> game, final GameBoard gameBoard) {
         this.game = game;
         this.gameBoard = gameBoard;
@@ -21,5 +22,10 @@ public class GameService {
         this.game.getFirst().setScore(0);
         this.game.getSecond().setScore(0);
         //TODO: add currentGame to Board
+    }
+
+    public void updateScore(Pair<Integer, Integer> newScore) {
+        this.game.getFirst().setScore(newScore.getFirst());
+        this.game.getSecond().setScore(newScore.getSecond());
     }
 }
