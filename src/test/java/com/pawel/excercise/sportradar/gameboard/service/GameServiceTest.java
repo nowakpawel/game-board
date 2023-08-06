@@ -8,11 +8,6 @@ import org.springframework.data.util.Pair;
 public class GameServiceTest {
 
     @Test
-    void shouldBeAbleToCreateNewGameService() {
-        GameService gameService = new GameService();
-    }
-
-    @Test
     void shouldBeAbleToCreateGameServiceWithDependencies() {
         Team polishTeam = new Team();
         Team germanTeam = new Team();

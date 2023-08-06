@@ -5,14 +5,11 @@ import com.pawel.excercise.sportradar.gameboard.domain.Team;
 import org.springframework.data.util.Pair;
 
 public class GameService {
-    private Pair<Team, Team> game;
-    private GameBoard gameBoard;
+    private final Pair<Team, Team> game;
+    private final GameBoard gameBoard;
 
-    public GameService(Pair<Team, Team> game, GameBoard gameBoard) {
+    public GameService(final Pair<Team, Team> game, final GameBoard gameBoard) {
         this.game = game;
         this.gameBoard = gameBoard;
-    }
-
-    public GameService() {
     }
 }
