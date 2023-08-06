@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.util.Pair;
 
+import static org.assertj.core.api.FactoryBasedNavigableListAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -27,6 +28,7 @@ class GameBoardTest {
         Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
 
         underTest.addGameToBard(newGame);
-        assertEquals(underTest.getAllGames().size(), 1);
+        
+        assertEquals(1, underTest.getAllGames().size());
     }
 }
