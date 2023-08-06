@@ -1,5 +1,6 @@
 package com.pawel.excercise.sportradar.gameboard.service;
 
+import com.pawel.excercise.sportradar.gameboard.domain.GameBoard;
 import com.pawel.excercise.sportradar.gameboard.domain.Team;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.util.Pair;
