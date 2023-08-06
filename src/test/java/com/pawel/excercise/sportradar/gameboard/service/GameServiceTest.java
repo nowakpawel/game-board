@@ -35,6 +35,21 @@ public class GameServiceTest {
         assertEquals(currentGame.getSecond(), germanTeam);
     }
 
+    @Test
+    void shouldBeAbleToInitialGame() {
+        Team polishTeam = new Team();
+        Team germanTeam = new Team();
+        Pair<Team, Team> game = Pair.of(polishTeam, germanTeam);
 
+        GameBoard gameBoard = new GameBoard();
 
+        GameService gameService = new GameService(game, gameBoard);
+
+        gameService.startGame();
+
+        Pair<Team, Team> currentGame = gameService.getGame();
+
+        assertEquals(currentGame.getFirst().getScore(), 0);
+        assertEquals(currentGame.getSecond().getScore(), 0);
+    }
 }
