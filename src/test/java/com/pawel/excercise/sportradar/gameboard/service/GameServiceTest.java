@@ -71,6 +71,12 @@ public class GameServiceTest {
         underTest.addNewGameObserver(newObserver);
 
         assertEquals(underTest.getGameObservers().size(), 2);
+    }
 
+    @Test
+    void shouldBeAbleToRemoveObserver() {
+        underTest.removeGameObserver(gameBoard);
+
+        assertEquals(underTest.observers.size(), 0);
     }
 }
