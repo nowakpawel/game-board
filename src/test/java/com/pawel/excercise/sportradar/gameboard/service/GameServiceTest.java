@@ -79,4 +79,9 @@ public class GameServiceTest {
 
         assertEquals(underTest.observers.size(), 0);
     }
+
+    @Test
+    void shouldBeAbleToFinishGame() {
+        verify(gameBoard, times(1)).removeGameFromBoard(any());
+    }
 }
