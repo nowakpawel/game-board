@@ -44,4 +44,21 @@ public class GameServiceTest {
         assertEquals(currentGame.getFirst().getScore(), 0);
         assertEquals(currentGame.getSecond().getScore(), 0);
     }
+
+    @Test
+    void shouldBeAbleToUpdateMatchScore() {
+        underTest.getGame();
+
+        Pair<Integer, Integer> newScore = Pair.of(4, 1);
+
+        underTest.updateScore(newScore);
+
+        assertEquals(underTest.getGame().getFirst().getScore(), 4);
+        assertEquals(underTest.getGame().getSecond().getScore(), 1);
+
+
+
+
+
+    }
 }
