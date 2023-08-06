@@ -65,11 +65,11 @@ public class GameServiceTest {
         verify(gameBoard, times(1)).update();
     }
 
-//    @Test
-//    void shouldBeAbleToAddNewObserver(GameObserver newObserver) {
-//        underTest.addNewGameObserver(newObserver);
-//
-//        assertEquals(underTest.getGameObservers(), 2);
-//
-//    }
+    @Test
+    void shouldBeAbleToAddNewObserver(GameObserver newObserver) {
+        underTest.addNewGameObserver(newObserver);
+
+        assertEquals(underTest.getGameObservers(), 2);
+
+    }
 }
