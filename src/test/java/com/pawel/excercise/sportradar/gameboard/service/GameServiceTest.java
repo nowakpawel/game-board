@@ -8,18 +8,17 @@ import org.springframework.data.util.Pair;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 public class GameServiceTest {
-    private GameService underTest = null;
+    private GameService underTest;
+
+    private GameBoard gameBoard = mock(GameBoard.class);
     @BeforeEach
     void setUp() {
         Team polishTeam = new Team();
         Team germanTeam = new Team();
         Pair<Team, Team> game = Pair.of(polishTeam, germanTeam);
-
-        GameBoard gameBoard = new GameBoard();
 
         underTest = new GameService(game, gameBoard);
     }
@@ -58,6 +57,6 @@ public class GameServiceTest {
         assertEquals(underTest.getGame().getFirst().getScore(), 4);
         assertEquals(underTest.getGame().getSecond().getScore(), 1);
 
-        verify(underTest, times(1)).notifyObserver();
+        verify(gameBoard, times(1)).update();
     }
 }
