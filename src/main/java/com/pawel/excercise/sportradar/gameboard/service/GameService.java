@@ -16,4 +16,10 @@ public class GameService {
     public Pair<Team, Team> getGame() {
         return game;
     }
+
+    public void startGame() {
+        this.game.getFirst().setScore(0);
+        this.game.getSecond().setScore(0);
+        //TODO: add currentGame to Board
+    }
 }
