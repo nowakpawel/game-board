@@ -27,5 +27,12 @@ public class GameService {
     public void updateScore(Pair<Integer, Integer> newScore) {
         this.game.getFirst().setScore(newScore.getFirst());
         this.game.getSecond().setScore(newScore.getSecond());
+
+        notifyObserver();
+    }
+
+    public void notifyObserver() {
+        //TODO: call gameBoard.update() method
+        gameBoard.update();
     }
 }
