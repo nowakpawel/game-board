@@ -32,7 +32,6 @@ public class GameService {
     }
 
     public void notifyObserver() {
-        //TODO: call gameBoard.update() method
         gameBoard.update();
     }
 }
