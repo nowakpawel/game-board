@@ -12,4 +12,8 @@ public class GameService {
         this.game = game;
         this.gameBoard = gameBoard;
     }
+
+    public Pair<Team, Team> getGame() {
+        return game;
+    }
 }
