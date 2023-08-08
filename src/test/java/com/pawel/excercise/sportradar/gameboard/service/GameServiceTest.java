@@ -48,6 +48,8 @@ public class GameServiceTest {
 
         assertEquals(currentGame.getFirst().getScore(), 0);
         assertEquals(currentGame.getSecond().getScore(), 0);
+
+        verify(gameBoard, times(1)).addGameToBard(currentGame);
     }
 
     @Test
