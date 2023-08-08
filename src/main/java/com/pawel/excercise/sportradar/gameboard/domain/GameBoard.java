@@ -26,4 +26,9 @@ public class GameBoard implements GameObserver {
     public void addGameToBard(Pair<Team, Team> game) {
         allGames.add(game);
     }
+
+    @Override
+    public void removeGameFromBoard(Pair<Team, Team> game) {
+        allGames.remove(game);
+    }
 }
