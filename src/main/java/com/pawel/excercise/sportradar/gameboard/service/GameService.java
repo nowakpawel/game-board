@@ -33,6 +33,11 @@ public class GameService extends GameObservable {
         notifyObservers();
     }
 
+    public void finishGame(Pair<Team, Team> game) {
+        observers.forEach(
+                o -> o.removeGameFromBoard(game));
+    }
+
     public List<GameObserver> getGameObservers() {
         return observers;
     }
