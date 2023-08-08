@@ -23,7 +23,8 @@ public class GameService extends GameObservable {
     public void startGame() {
         this.game.getFirst().setScore(0);
         this.game.getSecond().setScore(0);
-        //TODO: add currentGame to Board
+
+        observers.forEach(o -> o.addGameToBard(this.game));
     }
 
     public void updateScore(Pair<Integer, Integer> newScore) {
