@@ -33,7 +33,7 @@ class GameBoardTest {
     }
 
     @Test
-    void shouldBeAbleToRemoveGameFrpomTheBoard() {
+    void shouldBeAbleToRemoveGameFromTheBoard() {
         Team polishTeam = new Team();
         Team germanTeam = new Team();
         Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
