@@ -1,5 +1,8 @@
 package com.pawel.excercise.sportradar.gameboard.domain;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Team {
     private String name;
     private Integer score;

@@ -1,34 +1,38 @@
 package com.pawel.excercise.sportradar.gameboard.domain;
 
 import com.pawel.excercise.sportradar.gameboard.utils.GameObserver;
+import com.pawel.excercise.sportradar.gameboard.web.repository.GameRepository;
 import org.springframework.data.util.Pair;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class GameBoard implements GameObserver {
+    private final GameRepository gameRepository;
 
-    private List<Pair<Team, Team>> allGames = new ArrayList<>();
 
-    public List<Pair<Team, Team>> getAllGames() {
-        return allGames;
+    public GameBoard(GameRepository gameRepository) {
+        this.gameRepository = gameRepository;
     }
 
-    public GameBoard() {
+    public List<Pair<Team, Team>> getAllGames() {
+        return gameRepository.getAllGames();
     }
 
     @Override
     public void update() {
-        //some implementation
+       gameRepository.getAllGames().stream()
+//               .map(game -> System.out::println(game));
     }
 
     @Override
     public void addGameToBard(Pair<Team, Team> game) {
-        allGames.add(game);
+        gameRepository.addNewGame(game);
     }
 
     @Override
     public void removeGameFromBoard(Pair<Team, Team> game) {
-        allGames.remove(game);
+        gameRepository.removeGame(game);
     }
 }

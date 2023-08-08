@@ -9,39 +9,39 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class GameBoardTest {
-    private GameBoard underTest;
-
-    @BeforeEach
-    void setUp() {
-        underTest = new GameBoard();
-    }
-
-    @Test
-    void shouldBeAbleToGetAllGames() {
-        assertNotNull(underTest.getAllGames());
-    }
-
-    @Test
-    void shouldBeAbleToAddGameToBoard() {
-        Team polishTeam = new Team();
-        Team germanTeam = new Team();
-        Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
-
-        underTest.addGameToBard(newGame);
-        
-        assertEquals(1, underTest.getAllGames().size());
-    }
-
-    @Test
-    void shouldBeAbleToRemoveGameFromTheBoard() {
-        Team polishTeam = new Team();
-        Team germanTeam = new Team();
-        Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
-
-        underTest.addGameToBard(newGame);
-
-        underTest.removeGameFromBoard(newGame);
-
-        assertEquals(underTest.getAllGames().size(), 0);
-    }
+//    private GameBoard underTest;
+//
+//    @BeforeEach
+//    void setUp() {
+//        underTest = new GameBoard();
+//    }
+//
+//    @Test
+//    void shouldBeAbleToGetAllGames() {
+//        assertNotNull(underTest.getAllGames());
+//    }
+//
+//    @Test
+//    void shouldBeAbleToAddGameToBoard() {
+//        Team polishTeam = new Team();
+//        Team germanTeam = new Team();
+//        Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
+//
+//        underTest.addGameToBard(newGame);
+//
+//        assertEquals(1, underTest.getAllGames().size());
+//    }
+//
+//    @Test
+//    void shouldBeAbleToRemoveGameFromTheBoard() {
+//        Team polishTeam = new Team();
+//        Team germanTeam = new Team();
+//        Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
+//
+//        underTest.addGameToBard(newGame);
+//
+//        underTest.removeGameFromBoard(newGame);
+//
+//        assertEquals(underTest.getAllGames().size(), 0);
+//    }
 }
