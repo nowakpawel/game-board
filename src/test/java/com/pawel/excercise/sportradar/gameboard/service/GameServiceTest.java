@@ -16,14 +16,13 @@ import static org.mockito.Mockito.*;
 
 public class GameServiceTest {
     private GameService underTest;
-
-
     private GameObserver gameBoard = mock(GameBoard.class);
+    private Pair<Team, Team> game;
     @BeforeEach
     void setUp() {
         Team polishTeam = new Team();
         Team germanTeam = new Team();
-        Pair<Team, Team> game = Pair.of(polishTeam, germanTeam);
+        game = Pair.of(polishTeam, germanTeam);
 
         underTest = new GameService(game, gameBoard);
     }
@@ -82,6 +81,8 @@ public class GameServiceTest {
 
     @Test
     void shouldBeAbleToFinishGame() {
+
+        underTest.finishGame(game);
         verify(gameBoard, times(1)).removeGameFromBoard(any());
     }
 }
