@@ -31,4 +31,17 @@ class GameBoardTest {
         
         assertEquals(1, underTest.getAllGames().size());
     }
+
+    @Test
+    void shouldBeAbleToRemoveGameFrpomTheBoard() {
+        Team polishTeam = new Team();
+        Team germanTeam = new Team();
+        Pair<Team, Team> newGame = Pair.of(polishTeam, germanTeam);
+
+        underTest.addGameToBard(newGame);
+
+        underTest.removeGame(newGame);
+
+        assertEquals(underTest.getAllGames().size(), 0);
+    }
 }
