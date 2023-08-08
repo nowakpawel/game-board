@@ -40,7 +40,7 @@ class GameBoardTest {
 
         underTest.addGameToBard(newGame);
 
-        underTest.removeGame(newGame);
+        underTest.removeGameFromBoard(newGame);
 
         assertEquals(underTest.getAllGames().size(), 0);
     }
