@@ -80,6 +80,13 @@ public class GameServiceTest {
     }
 
     @Test
+    void shouldNotifyObserversWhenScoreUpdated() {
+        underTest.updateScore(Pair.of(4, 0));
+
+        verify(gameBoard, times(1)).update();
+    }
+
+    @Test
     void shouldBeAbleToFinishGame() {
 
         underTest.finishGame(game);
