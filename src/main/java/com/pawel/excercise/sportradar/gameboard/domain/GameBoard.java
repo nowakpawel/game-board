@@ -23,7 +23,10 @@ public class GameBoard implements GameObserver {
     @Override
     public void update() {
        gameRepository.getAllGames().stream()
-//               .map(game -> System.out::println(game));
+               .forEach(game -> {
+                   System.out.println(game.getFirst().getName() + ": " + game.getFirst().getScore() +
+                           "\n" + game.getSecond().getName() + ": " + game.getSecond().getScore());
+               });
     }
 
     @Override
