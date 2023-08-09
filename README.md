@@ -19,14 +19,18 @@ Application is my variation of 'Observer pattern'.
 
 
 ## Development process
-I've tried to keep TDD behaviour and show it via git commits history (Test was written first - then implementation of features)
+I've tried to keep TDD behaviour and show it via git commits history (Test was written first - then implementation of features).
 
 ## Additional 
 I've also added additional branch _**tests**_ where I added additional spring dependencies to create endpoints for testing application :)
 Although this functionality is not done in 100% yet, feel free to try it via postman!
-- **add-team** - adding new Team to repository
-- **get-all-teams** - retrieve all teams from repository
-- **get-all-games** - retrieve all ongoing games
-- **add-game** - adding new game (between two teams) to game repository
-- **start-game** starting game from _gameRepository_ (put it in initial status)
-- **update-score** - updating match result
+- **/game/add-team** - adding new Team to repository
+- **/game/get-all-teams** - retrieve all teams from repository
+- **/game/get-all-games** - retrieve all ongoing games
+- **/game/add-game** - adding new game (between two teams) to game repository
+- **/game/start-game** starting game from _gameRepository_ (put it in initial status)
+- **/game/update-score** - updating match result
+
+
+- **GameBoard**
+    - **/board** - displaying all games from board
