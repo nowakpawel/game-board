@@ -2,7 +2,7 @@
 
  ![](SoccerGameBoard.png)
 
-Simple application to display current sport competition.
+Simple application to display current sport competition results.
  
 ## Using application:
 Application is my variation of 'Observer pattern'.
