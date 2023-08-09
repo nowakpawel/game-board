@@ -20,6 +20,12 @@ Application is my variation of 'Observer pattern'.
 
 ## Development process
 I've tried to keep TDD behaviour and show it via git commits history (Test was written first - then implementation of features).
+During development process I had 3 main goals:
+- Keep project as simple as possible
+- Show a sample of my Jva skills
+- Trying to keep project open for new features
+
+I hope I've achieved that :)
 
 ## Additional 
 I've also added additional branch _**tests**_ where I added additional spring dependencies to create endpoints for testing application :)
