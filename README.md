@@ -11,7 +11,7 @@ Application is my variation of 'Observer pattern'.
   - [x] updateScore() - for updating score during the match - in this method all '**Observers**' are nootifing about updating
   - [x] finishGame() - match is removed from board 
   - [x] notifyObservers() - for notifying all '**Observers**' such as GameBoard
-  - [x]add/removeObserver() for managing all potential Observers.
+  - [x] add/removeObserver() for managing all potential Observers.
 - GameBoard - Observer implementation for displaying all already started games.
   - [x] update() method for sorting and displaying current games
   - [x] getSummmary() - for possibility to get all match results at demand
@@ -22,7 +22,7 @@ Application is my variation of 'Observer pattern'.
 I've tried to keep TDD behaviour and show it via git commits history (Test was written first - then implementation of features).
 During development process I had 3 main goals:
 - Keep project as simple as possible
-- Show a sample of my Jva skills
+- Show a sample of my Java skills
 - Trying to keep project open for new features
 
 I hope I've achieved that :)
