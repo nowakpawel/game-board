@@ -7,8 +7,7 @@ import org.springframework.data.util.Pair;
 import java.util.List;
 
 import static org.assertj.core.api.FactoryBasedNavigableListAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GameBoardTest {
     private GameBoard underTest;
