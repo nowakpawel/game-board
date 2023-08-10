@@ -5,7 +5,6 @@ import com.pawel.excercise.sportradar.gameboard.utils.GameObservable;
 import com.pawel.excercise.sportradar.gameboard.utils.GameObserver;
 import org.springframework.data.util.Pair;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GameService extends GameObservable {

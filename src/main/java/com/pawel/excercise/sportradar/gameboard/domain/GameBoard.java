@@ -41,18 +41,6 @@ public class GameBoard implements GameObserver {
     private List<Pair<Team, Team>> sort(List<Pair<Team, Team>> games) {
         int allGamesSize = games.size();
 
-//        while (unordered) {
-//            unordered = false;
-//            for (int i = 0; i < allGamesSize - 1; i++) {
-//                if (getTotalGameScore(games.get(i)) < getTotalGameScore(games.get(i + 1))) {
-//                    unordered = true;
-//                    Pair<Team, Team> tempGame = games.get(i);
-//                    orderedGames.add(i, games.get(i + 1));
-//                    orderedGames.add((i + 1), tempGame);
-//                }
-//            }
-//        }
-
         Pair<Team, Team> tempGame;
         boolean sorted = false;
 
